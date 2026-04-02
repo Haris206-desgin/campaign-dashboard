@@ -1,0 +1,61 @@
+{
+  "campaigns": [
+    {
+      "id": "c001",
+      "name": "Lumiere Summer Launch",
+      "client": "Lumiere Skincare",
+      "status": "active",
+      "budget": 50000,
+      "spend": 32450,
+      "impressions": 2400000,
+      "clicks": 48000,
+      "conversions": 1200,
+      "dailyData": [
+        { "date": "2024-01-01", "impressions": 80000, "clicks": 1600, "conversions": 40 },
+        { "date": "2024-01-02", "impressions": 85000, "clicks": 1700, "conversions": 42 }
+      ]
+    },
+    {
+      "id": "c002",
+      "name": "TechPro Enterprise Campaign",
+      "client": "TechPro Solutions",
+      "status": "active",
+      "budget": 75000,
+      "spend": 45200,
+      "impressions": 1800000,
+      "clicks": 36000,
+      "conversions": 980,
+      "dailyData": []
+    },
+    {
+      "id": "c003",
+      "name": "FitLife App Launch",
+      "client": "FitLife Health",
+      "status": "paused",
+      "budget": 30000,
+      "spend": 12500,
+      "impressions": 950000,
+      "clicks": 19000,
+      "conversions": 450,
+      "dailyData": []
+    },
+    {
+      "id": "c004",
+      "name": "EcoHome Green Initiative",
+      "client": "EcoHome Products",
+      "status": "completed",
+      "budget": 40000,
+      "spend": 40000,
+      "impressions": 2100000,
+      "clicks": 42000,
+      "conversions": 1100,
+      "dailyData": []
+    }
+  ],
+  "clients": [
+    { "id": "cl001", "name": "Lumiere Skincare" },
+    { "id": "cl002", "name": "TechPro Solutions" },
+    { "id": "cl003", "name": "FitLife Health" },
+    { "id": "cl004", "name": "EcoHome Products" }
+  ]
+}
