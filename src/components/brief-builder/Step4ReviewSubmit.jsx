@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 const Step4ReviewSubmit = ({ formData, onSubmit, loading, onPrev, onValidationChange }) => {
   const [isValid, setIsValid] = useState(false);
 
-  const validateForm = () => {
+  // 1. Memoized validation function to satisfy ESLint dependency rules
+  const validateForm = useCallback(() => {
     // Check if all required fields are filled
     const isClientValid = formData.clientDetails.name.trim() !== '' && 
                           formData.clientDetails.industry.trim() !== '';
@@ -24,11 +25,12 @@ const Step4ReviewSubmit = ({ formData, onSubmit, loading, onPrev, onValidationCh
     }
     
     return valid;
-  };
+  }, [formData, onValidationChange]);
 
+  // 2. Trigger validation when the component mounts or formData changes
   useEffect(() => {
     validateForm();
-  }, [formData]);
+  }, [validateForm]);
 
   const handleSubmit = () => {
     if (validateForm()) {
